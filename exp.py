@@ -3,6 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 import json
+
+'''使浏览器静音'''
+options = webdriver.ChromeOptions()
+options.add_argument("--mute-audio")
 # 填写webdriver的保存目录
 driver = webdriver.Chrome()
 

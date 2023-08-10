@@ -3,8 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 import json
+
+'''使浏览器静音'''
+options = webdriver.ChromeOptions()
+options.add_argument("--mute-audio")
 # 填写webdriver的保存目录
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=options)
 
 # 记得写完整的url 包括http和https
 driver.get('https://cc.163.com/24/6924324/?actiontype=1&actid=9670&actidpos=activity-entry-con')
